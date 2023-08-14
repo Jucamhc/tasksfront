@@ -1,5 +1,6 @@
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
+import { TaskProvider } from "./context/TaskContext";
 
 export const App = () => {
   return (
@@ -9,8 +10,10 @@ export const App = () => {
           <h1 className="text-3xl font-bold text-center block my-2">
             Aplicaion de Tarea
           </h1>
-          <TaskForm />
-          <TaskList />
+          <TaskProvider>
+            <TaskForm />
+            <TaskList />
+          </TaskProvider>
         </div>
       </div>
     </>
